@@ -24,7 +24,9 @@ public class Stack<T>
     public T Peek()
     {
         if (_size == 0)
+        {
             throw new InvalidOperationException("Stack is empty");
+        }
 
         return _items[_size - 1];
     }
