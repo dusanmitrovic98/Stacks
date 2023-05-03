@@ -21,6 +21,11 @@ public class Stack<T>
         _items = new T[capacity];
     }
 
+    public void Push(T item)
+    {
+
+    }
+
     public T Pop()
     {
         if (_size == 0)
