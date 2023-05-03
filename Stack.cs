@@ -23,6 +23,9 @@ public class Stack<T>
 
     public T Pop()
     {
+        if (_size == 0)
+            throw new InvalidOperationException("Stack is empty");
+
         throw new NotImplementedException();
     }
 
