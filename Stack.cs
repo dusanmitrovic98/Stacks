@@ -24,7 +24,9 @@ public class Stack<T>
     public void Push(T item)
     {
         if (_size == _items.Length)
+        {
             // EnsureCapacity(_size + 1);
+        }
     }
 
     public T Pop()
