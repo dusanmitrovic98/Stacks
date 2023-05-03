@@ -25,8 +25,10 @@ public class Stack<T>
     {
         if (_size == _items.Length)
         {
-            // EnsureCapacity(_size + 1);
+            EnsureCapacity(_size + 1);
         }
+
+        _items[_size++] = item;
     }
 
     public T Pop()
@@ -48,5 +50,16 @@ public class Stack<T>
         }
 
         return _items[_size - 1];
+    }
+
+    private void EnsureCapacity(int min)
+    {
+        int newCapacity = _items.Length == 0 ? 4 : _items.Length * 2;
+        if (newCapacity < min)
+            newCapacity = min;
+
+        T[] newItems = new T[newCapacity];
+        Array.Copy(_items, 0, newItems, 0, _size);
+        _items = newItems;
     }
 }
