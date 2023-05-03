@@ -10,4 +10,9 @@ public class Stack<T>
         const int defaultCapacity = 4;
         _items = new T[defaultCapacity];
     }
+
+    public Stack(int capacity)
+    {
+
+    }
 }
