@@ -21,6 +21,11 @@ public class Stack<T>
         _items = new T[capacity];
     }
 
+    public T Pop()
+    {
+        throw new NotImplementedException();
+    }
+
     public T Peek()
     {
         if (_size == 0)
