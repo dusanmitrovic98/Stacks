@@ -4,11 +4,11 @@ public class Stack<T>
 {
     private T[] _items;
     private int _size;
-    private const int defaultCapacity = 4;
+    private const int DEFAULT_CAPACITY = 4;
 
     public Stack()
     {
-        _items = new T[defaultCapacity];
+        _items = new T[DEFAULT_CAPACITY];
     }
 
     public Stack(int capacity)
