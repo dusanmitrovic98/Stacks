@@ -26,6 +26,8 @@ public class Stack<T>
         if (_size == 0)
             throw new InvalidOperationException("Stack is empty");
 
+        T item = _items[--_size];
+
         throw new NotImplementedException();
     }
 
