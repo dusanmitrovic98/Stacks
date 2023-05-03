@@ -6,6 +6,8 @@ public class Stack<T>
     private int _size;
     private const int DEFAULT_CAPACITY = 4;
 
+    public int Count => _size;
+
     public Stack()
     {
         _items = new T[DEFAULT_CAPACITY];
