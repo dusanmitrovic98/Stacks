@@ -1,4 +1,6 @@
-﻿namespace DataStructures.Collections.Stacks;
+﻿using System.Collections;
+
+namespace DataStructures.Collections.Stacks;
 
 public class Stack<T>
 {
@@ -61,5 +63,42 @@ public class Stack<T>
         T[] newItems = new T[newCapacity];
         Array.Copy(_items, 0, newItems, 0, _size);
         _items = newItems;
+    }
+
+    public void Clear()
+    {
+        Array.Clear(_items, 0, _size); // Avoid memory leaks
+        _size = 0;
+    }
+
+    public bool Contains(T item)
+    {
+        EqualityComparer<T> c = EqualityComparer<T>.Default;
+        for (int i = 0; i < _size; i++)
+        {
+            if (c.Equals(_items[i], item))
+                return true;
+        }
+
+        return false;
+    }
+
+    public void TrimExcess()
+    {
+        int threshold = (int)(_items.Length * 0.9);
+        if (_size < threshold)
+        {
+            T[] newArray = new T[_size];
+            Array.Copy(_items, 0, newArray, 0, _size);
+            _items = newArray;
+        }
+    }
+
+    public IEnumerator<T> GetEnumerator()
+    {
+        for (int i = _size - 1; i >= 0; i--)
+        {
+            yield return _items[i];
+        }
     }
 }
