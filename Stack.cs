@@ -20,4 +20,9 @@ public class Stack<T>
     {
         _items = new T[capacity];
     }
+
+    public T Peek()
+    {
+
+    }
 }
