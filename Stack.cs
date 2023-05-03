@@ -7,6 +7,6 @@ public class Stack<T>
 
     public Stack()
     {
-
+        const int defaultCapacity = 4;
     }
 }
