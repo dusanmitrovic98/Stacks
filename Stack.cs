@@ -29,7 +29,7 @@ public class Stack<T>
         T item = _items[--_size];
         _items[_size] = default(T);
 
-        throw new NotImplementedException();
+        return item;
     }
 
     public T Peek()
