@@ -1,5 +1,5 @@
 ﻿namespace Stacks;
-public class Class1
+public class Stack
 {
 
 }
