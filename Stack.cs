@@ -24,5 +24,7 @@ public class Stack<T>
     public T Peek()
     {
 
+
+        return _items[_size - 1];
     }
 }
