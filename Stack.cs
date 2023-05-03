@@ -1,6 +1,6 @@
 ﻿namespace DataStructures.Collections.Stacks;
 
-public class Stack
+public class Stack<T>
 {
 
 }
