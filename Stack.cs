@@ -13,6 +13,6 @@ public class Stack<T>
 
     public Stack(int capacity)
     {
-
+        _items = new T[capacity];
     }
 }
