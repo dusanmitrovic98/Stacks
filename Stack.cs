@@ -100,5 +100,5 @@ public class Stack<T>
         {
             yield return _items[i];
         }
-    }2
+    }
 }
